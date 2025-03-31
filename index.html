@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier League Match Overlay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="edit-toggle" id="edit-toggle">Edit</button>
+    
+    <div class="overlay-container">
+        <div class="scoreboard">
+            <div class="team-container">
+                <div id="home-color-bar" class="team-color-bar home-color-bar"></div>
+                <div id="home-team" class="team">EVE</div>
+            </div>
+            <div class="score">
+                <span id="home-score">0</span> - <span id="away-score">0</span>
+            </div>
+            <div class="team-container">
+                <div id="away-team" class="team">TOT</div>
+                <div id="away-color-bar" class="team-color-bar away-color-bar"></div>
+            </div>
+            <div class="timer" id="match-timer">00:00</div>
+        </div>
+    </div>
+    
+    <div class="controls compact-controls">
+        <div class="control-section">
+            <button id="home-goal">Home Goal +</button>
+            <button id="home-goal-minus">Home Goal -</button>
+            <button id="away-goal">Away Goal +</button>
+            <button id="away-goal-minus">Away Goal -</button>
+            <button id="reset-score">Reset Score</button>
+        </div>
+        
+        <div class="control-section">
+            <button id="start-timer">Start Timer</button>
+            <button id="stop-timer">Stop Timer</button>
+            <button id="reset-timer">Reset Timer</button>
+            <input type="text" id="custom-time" placeholder="MM:SS">
+            <button id="set-custom-time">Set Time</button>
+        </div>
+        
+        <div class="control-section">
+            <h3>Home Team</h3>
+            <div id="home-team-buttons" class="team-buttons">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="control-section">
+            <h3>Away Team</h3>
+            <div id="away-team-buttons" class="team-buttons">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="control-section">
+            <h3>API Options</h3>
+            <button id="api-fetch">Fetch Live Matches</button>
+            <div id="matches-container" class="matches-container">
+                <!-- Populated by JavaScript with match buttons -->
+            </div>
+            <div class="status-message" id="api-status"></div>
+        </div>
+        
+        <div class="keyboard-shortcuts">
+            <h3>Keyboard Shortcuts</h3>
+            <ul>
+                <li><strong>H</strong> - Home Goal +</li>
+                <li><strong>J</strong> - Home Goal -</li>
+                <li><strong>K</strong> - Away Goal +</li>
+                <li><strong>L</strong> - Away Goal -</li>
+                <li><strong>R</strong> - Reset Score</li>
+                <li><strong>S</strong> - Start Timer</li>
+                <li><strong>P</strong> - Stop Timer</li>
+                <li><strong>T</strong> - Reset Timer</li>
+                <li><strong>E</strong> - Toggle Controls</li>
+                <li><strong>F</strong> - Fetch API Data</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="teams.js"></script>
+    <script src="api.js"></script>
+    <script src="overlay.js"></script>
+</body>
+</html>
