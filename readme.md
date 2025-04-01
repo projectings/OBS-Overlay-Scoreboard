@@ -109,9 +109,9 @@ Modify `styles.css` to change the appearance of the overlay.
 - **Controls Not Showing**: Press 'E' key to toggle edit mode
 - **Timer Issues**: Click Reset Timer before starting a new time
 
-## License
+## Updates
 
-This project is open source and available for personal and commercial use.
+- Based on if this project is a success, I am planning to expand it into other football leagues and then possibly into basketball. I will also make it possible to update it every season to change the teams based on relegation.
 
 ## Credits
 
